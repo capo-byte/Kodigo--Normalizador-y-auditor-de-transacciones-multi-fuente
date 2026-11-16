@@ -1,0 +1,54 @@
+[
+  {
+    "raw_record": {
+      "transaction_id": "BETA-2002",
+      "total": -500,
+      "currency": "USD",
+      "created_at": "31/02/2025 10:00",
+      "state": "declined"
+    },
+    "detected_source": "provider_beta",
+    "errors": [
+      "El monto debe ser mayor que 0 (recibido: -5).",
+      "Fecha '31/02/2025 10:00' no coincide con los formatos esperados."
+    ]
+  },
+  {
+    "raw_record": {
+      "ref": "GAMMA-3002",
+      "amount": "INVALID_NUM",
+      "date": "2025-03-13T12:00:00Z",
+      "result": "failed"
+    },
+    "detected_source": "provider_gamma",
+    "errors": [
+      "Formato numérico no válido en monto: 'INVALID_NUM'.",
+      "No se pudo determinar la divisa de la transacción."
+    ]
+  },
+  {
+    "raw_record": {
+      "id": "",
+      "amount": "20.00",
+      "currency": "JPY",
+      "timestamp": "2025-03-13 08:00:00",
+      "status": "unknown_state"
+    },
+    "detected_source": "provider_alpha",
+    "errors": [
+      "El identificador de transacción está vacío o ausente.",
+      "Divisa no soportada: 'JPY'.",
+      "Estado no reconocido en catálogo: 'unknown_state'."
+    ]
+  },
+  {
+    "raw_record": {
+      "foo": "bar",
+      "value": 123
+    },
+    "detected_source": null,
+    "errors": [
+      "No se pudo identificar la fuente: firma de llaves desconocida."
+    ]
+  }
+]

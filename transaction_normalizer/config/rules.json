@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "default_timezone": "UTC",
+    "quarantine_invalid_records": true
+  },
+  "sources": {
+    "provider_alpha": {
+      "signature_keys": ["id", "amount", "currency", "timestamp", "status"],
+      "field_map": {
+        "transaction_id": "id",
+        "amount": "amount",
+        "currency": "currency",
+        "timestamp": "timestamp",
+        "status": "status"
+      },
+      "amount_divisor": 1,
+      "date_formats": ["%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%SZ"]
+    },
+    "provider_beta": {
+      "signature_keys": ["transaction_id", "total", "currency", "created_at", "state"],
+      "field_map": {
+        "transaction_id": "transaction_id",
+        "amount": "total",
+        "currency": "currency",
+        "timestamp": "created_at",
+        "status": "state"
+      },
+      "amount_divisor": 100,
+      "date_formats": ["%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M:%S"]
+    },
+    "provider_gamma": {
+      "signature_keys": ["ref", "amount", "date", "result"],
+      "field_map": {
+        "transaction_id": "ref",
+        "amount": "amount",
+        "currency": null,
+        "timestamp": "date",
+        "status": "result"
+      },
+      "amount_divisor": 1,
+      "date_formats": ["%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S%z"]
+    }
+  },
+  "currency_symbols": {
+    "$": "USD",
+    "€": "EUR",
+    "£": "GBP"
+  },
+  "supported_currencies": ["USD", "EUR", "GBP"],
+  "status_map": {
+    "completed": "SUCCESS",
+    "ok": "SUCCESS",
+    "success": "SUCCESS",
+    "succeeded": "SUCCESS",
+    "failed": "FAILED",
+    "error": "FAILED",
+    "declined": "FAILED",
+    "rejected": "FAILED",
+    "pending": "PENDING",
+    "processing": "PENDING",
+    "in_progress": "PENDING"
+  }
+}

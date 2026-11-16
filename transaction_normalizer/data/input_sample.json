@@ -1,0 +1,53 @@
+[
+  {
+    "id": "TX-1001",
+    "amount": "150.75",
+    "currency": "USD",
+    "timestamp": "2025-03-10 14:22:00",
+    "status": "completed"
+  },
+  {
+    "transaction_id": "BETA-2001",
+    "total": 10050,
+    "currency": "usd",
+    "created_at": "11/03/2025 09:15",
+    "state": "OK"
+  },
+  {
+    "ref": "GAMMA-3001",
+    "amount": "€99,99",
+    "date": "2025-03-12T18:05:30Z",
+    "result": "success"
+  },
+  {
+    "id": "TX-1002",
+    "amount": "45.00",
+    "currency": "GBP",
+    "timestamp": "2025-03-12 20:00:00",
+    "status": "pending"
+  },
+  {
+    "transaction_id": "BETA-2002",
+    "total": -500,
+    "currency": "USD",
+    "created_at": "31/02/2025 10:00",
+    "state": "declined"
+  },
+  {
+    "ref": "GAMMA-3002",
+    "amount": "INVALID_NUM",
+    "date": "2025-03-13T12:00:00Z",
+    "result": "failed"
+  },
+  {
+    "id": "",
+    "amount": "20.00",
+    "currency": "JPY",
+    "timestamp": "2025-03-13 08:00:00",
+    "status": "unknown_state"
+  },
+  {
+    "foo": "bar",
+    "value": 123
+  }
+]
